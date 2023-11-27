@@ -75,7 +75,7 @@ You can import other packages into your Go file using the import statement. Impo
 - Minimize the number of exported identifiers to maintain a clean and usable package interface.
 
 ## 2.5) Gotchas
-- Packages in child directories cannot reference packages in parent directories.
+- Packages cannot share a bidirectional relationship.
 
 ## 2.6) Exercise - Determine if a year is leap year
 1. Navigate to the project root directory in the command line.
@@ -99,8 +99,3 @@ func main() {
 git add .
 git commit -m "Completed exercise 2.6"
 ```
-
-## 2.7) Exercise - Nested Packages
-1. Checkout the `nested-packages` branch: `git checkout nested-packages`
-2. Try to run the program: `go run ./cmd/app`
-3. The program will fail to run. Update the package heirarchy so the program will run.
